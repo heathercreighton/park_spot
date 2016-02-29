@@ -8,6 +8,9 @@
 </head>
 <body>
 
+<% if user_signed_in? %>
+	<div class="pull-right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-info" %></div>
+<% end %>
 
 <div class="container">
 

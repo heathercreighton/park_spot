@@ -1,2 +1,24 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="row">
+	<div class="col-md-12", style="background:gray">
+   <div class="head">
+		<h1>Welcome To Park Spot</h1>
+		</div>
+	</div>
+</div>
+	<div class="well">
+		<p>Do you have a spot to rent or are you searching for a spot?</p>
+
+		<p id="notice"><%= notice %></p>
+
+		<%= form_tag new_session_path do %>
+			<p> I would like to: 
+
+				<%= select_tag(:role_select, options_for_select([ "Search", "Rent" ]), :prompt => "Please select") %></p>
+				<%= submit_tag "Let's do this!" %> </p>
+		<% end %>		
+
+
+	
+	</div>
+
+	

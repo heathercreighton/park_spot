@@ -1,7 +1,22 @@
 Rails.application.routes.draw do
+  get 'spaces/index'
+  post 'spaces/new'
+
+  get 'spaces/new'
+
+  get 'spaces/confirm'
+
+  get 'spaces/edit'
+
+  get 'spaces/show'
+
   root 'welcome#index'
 
+  post 'new_session' => 'welcome#new_session'
+
   devise_for :users
+  resources :spaces
+
 
 
   

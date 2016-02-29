@@ -20,8 +20,10 @@ gem 'font-awesome-rails'
 gem 'geocoder'
 gem 'httparty'
 gem 'figaro'
+gem 'gmaps4rails'
 
-
+gem 'better_errors'
+gem 'cancancan'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

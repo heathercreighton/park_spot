@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223160031) do
+ActiveRecord::Schema.define(version: 20160229125912) do
+
+  create_table "spaces", force: :cascade do |t|
+    t.integer  "user_id"
+    t.decimal  "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "address"
+    t.boolean  "open"
+    t.date     "start"
+    t.date     "end"
+    t.float    "latitude"
+    t.float    "longitude"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -31,6 +44,7 @@ ActiveRecord::Schema.define(version: 20160223160031) do
     t.string   "address"
     t.string   "city"
     t.string   "state"
+    t.string   "bill_add"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
