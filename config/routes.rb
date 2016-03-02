@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'spaces/edit'
 
   get 'spaces/show'
+  post 'spaces/show'
 
   root 'welcome#index'
 

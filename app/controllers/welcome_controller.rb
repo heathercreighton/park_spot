@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
 	def new_session
 
   	if params[:role_select] == "Search"
-			redirect_to spaces_index_path
+			redirect_to spaces_show_path
   	elsif params[:role_select] == "Rent"
   		redirect_to spaces_new_path
   	else
